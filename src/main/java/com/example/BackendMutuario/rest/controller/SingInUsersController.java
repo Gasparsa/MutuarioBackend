@@ -27,7 +27,7 @@ public class SingInUsersController {
 
     @PostMapping("/login")
     @ApiOperation(value = "Faz login de um aluno previamente cadastrado")
-    public LoginResponse authenticate(@ResponseBody UserLoginDto user) throws ServletException{
+    public LoginResponse authenticate( UserLoginDto user) throws ServletException{
 
         UserModel userCheck = userService.findByCpf(user.getCpf());
 
